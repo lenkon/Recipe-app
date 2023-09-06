@@ -2,10 +2,17 @@ class RecipesController < ApplicationController
   before_action :fetch_recipe, only: %i[show edit update destroy]
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.includes(:recipes_foods).all
   end
 
-  def show; end
+  def show
+    @foods = current_user.foods
+    @food_items = []
+    @foods.each do |food|
+      @food_items << [food.name, food.id]
+    end
+    @food_items
+  end
 
   def new
     @recipe = Recipe.new
