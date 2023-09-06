@@ -1,0 +1,7 @@
+<p style="color: MediumSeaGreen"><%= notice %></p>
+<%= render @recipe %>
+<div>
+  <%= link_to "Edit recipe", edit_recipe_path(@recipe) %> |
+  <%= link_to "Recipes", recipes_path %>
+  <%= button_to "Destroy", @recipe, method: :delete %>
+</div>
