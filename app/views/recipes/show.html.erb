@@ -3,7 +3,11 @@
 <%= render "add_food", recipe: @recipe %>
 
 <div>
-  <%= link_to "Edit recipe", edit_recipe_path(@recipe) %> |
+  <% if can? :update, @recipe %>
+    <%= link_to "Edit recipe", edit_recipe_path(@recipe) %> 
+  <% end %> |
   <%= link_to "Recipes", recipes_path %>
-  <%= button_to "Delete", @recipe, method: :delete %>
+  <% if can? :destroy, @recipe %>
+    <%= button_to "Delete", @recipe, method: :delete %>
+  <% end %>
 </div>
