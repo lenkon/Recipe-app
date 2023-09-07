@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :fetch_recipe, only: %i[show edit update destroy]
 
   def index
-    @recipes = current_user.recipes.includes(:recipes_foods).all.order('id DESC')
+    @recipes = current_user.recipes.includes(:recipe_foods).all.order('id DESC')
   end
 
   def show
