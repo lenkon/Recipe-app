@@ -23,6 +23,7 @@
     </div>
   </div>
 </div>
+
 <% if can? :update, recipe %>
   <%= form_with model: recipe, url: recipe_path(recipe.id), method: :patch do |f| %>
     <%= f.hidden_field :name, {value: recipe.name} %>
@@ -33,9 +34,11 @@
     <%= f.check_box :public, onchange: 'this.form.submit()', checked: recipe.public %>
   <% end %>
 <% end %>
+
 <%# <div>
   <button> Add Ingredient </button>
 </div> %>
+
 <% if @food_items %>
   <div>
     <%= form_with url: recipes_foods_path, method: :post, local: true, scope: :recipe_food do |f| %>
@@ -55,4 +58,3 @@
     <% end %>
   </div>
 <% end %>
-</div>
