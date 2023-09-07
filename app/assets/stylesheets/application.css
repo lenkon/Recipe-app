@@ -13,10 +13,23 @@
  *= require_tree .
  *= require_self
  */
- #mainNav .navbar-brand {
-    font-size: 1.5em;
-    font-weight: bold;
-    font-style: italic;
-    color: #e74120;
-    transition: all 0.3s;
-  }
+#mainNav .navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  color: #e74120;
+  transition: all 0.2s;
+}
+
+/* header element.style {
+  background-image: url('https://drive.google.com/file/d/1B2vfCJGxRZDAm3fT9jk0-Yl7-xGjGaSn/view?usp=sharing');
+} */
+
+header.masthead {
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
