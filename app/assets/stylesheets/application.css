@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ #mainNav .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    color: #e74120;
+    transition: all 0.3s;
+  }
