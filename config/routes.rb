@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "landing_page#index"
   
+  get 'recipes/public_recipes'
   resources :recipes
   resources :foods
   resources :recipe_foods
