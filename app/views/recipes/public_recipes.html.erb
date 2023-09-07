@@ -1,6 +1,7 @@
-<div class="container pt-3 pb-3">
+<div class="container pt-4 pb-4">
+  <h1 class="text-center mb-3">Public Recipes</h1>
   <% @recipes.each do |recipe| %>  
-  <div class="card mb-3">
+  <div class="card mb-4">
     <div class="card-body">
       <div class="container">
         <div class="row bg-light">
@@ -21,11 +22,11 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Total food item: <%= recipe.recipes_foods.size %></li>
                 <li class="list-group-item">
-                  <% sum = 0 %>
-                  <% recipe.recipes_foods.each do |food| %>
-                    <% sum += food.quantity * food.food.price %>
-                  <% end %>
-                  <%= "Total price: $#{sum}" %>
+                <% sum = 0 %>
+                <% recipe.recipes_foods.each do |food| %>
+                  <% sum += food.quantity * food.food.price %>
+                <% end %>
+                <%= "Total price: $#{sum}" %>
                 </li>
               </ul>
             </div>
@@ -34,4 +35,5 @@
       </div>
     </div>
   </div>
+  <% end %>
 </div>

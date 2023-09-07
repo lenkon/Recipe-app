@@ -5,16 +5,17 @@
     </div>
     <div class="card-body">
       <div class="row">
-        <div class="col-sm-8 mx-auto">
-          <%= link_to "Add Food", new_food_path() ,class: "btn btn-success" %>
+        <div class="col-sm-12 d-flex justify-content-end my-3">
+          <%= link_to "Add Food", new_food_path() ,class: "btn btn-primary" %>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-8 mx-auto">
-          <table class="table table-striped">
+        <div class="col-sm-12 mx-auto">
+          <table class="table table-striped table-sm">
             <thead>
               <tr>
                 <th scope="col">Food</th>
+                <th scope="col">Quantity</th>
                 <th scope="col">Measurement Unit</th>
                 <th scope="col">Unit Price</th>
                 <th scope="col">Action</th>
@@ -24,6 +25,7 @@
               <% @foods.each do |food| %>
                 <tr>
                   <td><%= food.name %></td>
+                  <td><%= food.quantity %></td>
                   <td><%= food.measurement_unit %></td>
                   <td><%= food.price %></td>
                   <td>
@@ -41,7 +43,7 @@
       </div>
     </div>
     <div class="card-footer text-muted text-center">
-      “You do not need a silver fork to eat good food.” ~ By Paul Prudhomme
+      “Food is not rational. Food is culture, habit, craving and identity.” ~ By PJonathan Safran Foer
     </div>
   </div>
 </div>
