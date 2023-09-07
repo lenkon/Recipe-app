@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :fetch_recipe, only: %i[show edit update destroy]
 
   def index
-    @recipes = Recipe.includes(:recipes_foods).all
+    @recipes = current_user.recipes.includes(:recipes_foods).all.order('id DESC')
   end
 
   def show
@@ -53,6 +53,10 @@ class RecipesController < ApplicationController
       format.html { redirect_to recipes_url, notice: 'Recipe destroyed successfully.' }
       format.json { head :no_content }
     end
+  end
+
+  def public_recipes
+    @recipes = Recipe.where(public: 't').order('id DESC')
   end
 
   private
