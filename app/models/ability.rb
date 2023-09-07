@@ -13,7 +13,7 @@ class Ability
     can :destroy, Recipe do |recipe|
       recipe.user == user
     end
-    
+
     can :create, Food
     can :create, Recipe
   end
