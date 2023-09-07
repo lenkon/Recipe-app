@@ -21,15 +21,23 @@
   transition: all 0.2s;
 }
 
-/* header element.style {
-  background-image: url('https://drive.google.com/file/d/1B2vfCJGxRZDAm3fT9jk0-Yl7-xGjGaSn/view?usp=sharing');
-} */
-
 header.masthead {
   text-align: center;
-  color: #fff;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  color: #534d4d;
+  background-color: #f1eee7;
+}
+
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  margin-bottom: 24px;  ;
+}
+
+header.masthead .masthead-heading {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  margin-bottom: 2.5rem;  
 }
