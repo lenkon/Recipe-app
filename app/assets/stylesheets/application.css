@@ -41,3 +41,21 @@ header.masthead .masthead-heading {
   line-height: 3.5rem;
   margin-bottom: 2.5rem;
 }
+
+a {
+  text-decoration: none;
+}
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
