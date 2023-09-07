@@ -30,7 +30,7 @@ class RecipeFoodsController < ApplicationController
         format.html { redirect_to recipe_url(@recipe_foods.recipe), notice: 'Ingredient saved successfully.' }
         format.json { render :show, status: :created, location: @recipe_foods.recipe }
       else
-        format.html { redirect_to recipe_url(recipe_foods_params[:recipe_id]), notice: 'Ingredient not saved.' }
+        format.html { redirect_to new_recipe_foods_url, notice: 'Ingredient not saved.' }
         format.json { render json: @recipe_foods.errors, status: :unprocessable_entity }
       end
     end
