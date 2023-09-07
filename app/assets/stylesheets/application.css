@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+#mainNav .navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+  color: #e74120;
+  transition: all 0.2s;
+}
+
+header.masthead {
+  text-align: center;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  color: #534d4d;
+  background-color: #f1eee7;
+}
+
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  margin-bottom: 24px;
+}
+
+header.masthead .masthead-heading {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  margin-bottom: 2.5rem;
+}
