@@ -107,8 +107,9 @@ To run the project, execute the following command:
 
 👤 **Musangamfura Emmanuel**
 
-- GitHub: [Musangamfura Emmanuel](https://github.com/musangamfure)
-- Linkedin: [Musangamfura Emmanuel](https://www.linkedin.com/in/musangamfura-emmanuel-6a214a262/)
+- [GitHub](https://github.com/musangamfure)
+- [Twitter](https://twitter.com/musangamfure)
+- [LinkedIn](https://www.linkedin.com/in/musangamfurae)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
