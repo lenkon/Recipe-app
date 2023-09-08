@@ -44,7 +44,7 @@
 
 - **User can add foods and recipes to the list**
 - **User can add ingredients to the recipes**
-- **WUser can generate a shopping list**
+- **User can generate a shopping list**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -55,6 +55,7 @@
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
+
 ```
   Ruby
   Ruby on Rails
@@ -89,7 +90,8 @@ To run the project, execute the following command:
 ```
 
 ### Run tests <a name="run-tests"></a>
-``` 
+
+```
   $ rspec
 ```
 
@@ -139,7 +141,7 @@ If you like this project please rate and give a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-* I would like to thank Microverse team for their support and guidance.
+- I would like to thank Microverse team for their support and guidance.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
