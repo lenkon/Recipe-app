@@ -2,16 +2,16 @@ require 'rails_helper'
 
 RSpec.describe 'Recipe page', type: :feature do
   before(:each) do
-    @user = User.new(name: 'Emmanuel', username: "#{DateTime.now}", email: "#{DateTime.now}@gmail.com",
-      password: 'x',
-      password_confirmation: 'x'
-    )
-    @recipe = @user.recipes.new(name: 'Chicken stew', preparation_time: 10, cooking_time: 50, description: '500', public: 't')
+    @user = User.new(name: 'Emmanuel', username: DateTime.now.to_s, email: "#{DateTime.now}@gmail.com",
+                     password: 'x',
+                     password_confirmation: 'x')
+    @recipe = @user.recipes.new(name: 'Chicken stew', preparation_time: 10, cooking_time: 50, description: '500',
+                                public: 't')
   end
 
   describe 'Recipes list index page' do
     it 'shows the right content' do
-      visit(root_path) 
+      visit(root_path)
       fill_in 'user[email]', with: @user.email
       fill_in 'user[password]', with: @user.password
       click_button 'Log In'
@@ -26,7 +26,7 @@ RSpec.describe 'Recipe page', type: :feature do
 
   describe 'Public Recipes page' do
     it 'shows the right content' do
-      visit(root_path) 
+      visit(root_path)
       fill_in 'user[email]', with: @user.email
       fill_in 'user[password]', with: @user.password
       click_button 'Log In'
