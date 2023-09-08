@@ -1,7 +1,7 @@
 <div class="container mt-5 pb-2 pt-5">
   <div class="card">
     <div class="card-header text-center">
-      <h3>Editing Recipe</h3>
+      <h3>Edit Recipe</h3>
     </div>
     <div class="card-body">
       <%# <h1></h1> %>
@@ -10,15 +10,15 @@
           <%= render "form", recipe: @recipe %>
           <br>
           <div>
-            <%= link_to "Show this recipe", @recipe, class: "text-decoration-none" %> |
+            <%= link_to "Recipe Details", @recipe, class: "text-decoration-none" %> |
             <span><%= link_to "", recipes_path, class: "fas fa-arrow-left fa-lg text-decoration-none" %></span>
-            <span><%= link_to "Back to Recipes", recipes_path, class: "text-decoration-none" %></span>
+            <span><%= link_to "All Recipes", recipes_path, class: "text-decoration-none" %></span>
           </div>
         </div>
       </div>
     </div>
     <div class="card-footer text-muted text-center">
-      “You do not need a silver fork to eat good food.” ~ By Paul Prudhomme
+      “Food is not rational. Food is culture, habit, craving and identity.” ~ By PJonathan Safran Foer
     </div>
   </div>
 </div>

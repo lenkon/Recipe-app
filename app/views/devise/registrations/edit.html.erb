@@ -1,7 +1,7 @@
 <div class="container mt-5 pb-2 pt-5">
   <div class="card">
     <div class="card-header text-center">
-      <h3>Update Your Account</h3>
+      <h3>Update Account</h3>
     </div>
     <div class="card-body">
       <div class="row">
@@ -13,7 +13,7 @@
               <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email" %>
             </div>
             <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+              <div>Confirm email: <%= resource.unconfirmed_email %></div>
             <% end %>
             <div class="field form-group mb-3">
               <%= f.label :password, class: "form-label fw-bold" %> <i>(leave blank if you don't want to change it)</i><br />
@@ -35,15 +35,14 @@
               <%= f.submit "Update", class: "btn btn-success" %>
             </div>
           <% end %><br />
-          <p>Want to permanently delete your account? <%= button_to "Delete Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger"  %></p>
+          <p>Delete account permanently? <%= button_to "Delete Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger"  %></p>
           <br />
           <%= link_to "Back", :back %>
         </div>
       </div>
     </div>
     <div class="card-footer text-muted text-center">
-      “You do not need a silver fork to eat good food.” ~ By Paul Prudhomme
+      “Food is not rational. Food is culture, habit, craving and identity.” ~ By PJonathan Safran Foer
     </div>
   </div>
   </div>
-

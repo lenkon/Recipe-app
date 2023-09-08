@@ -9,17 +9,17 @@
             <li class="list-group-item text-success px-0"><strong>Cooking time:</strong> <%= recipe.cooking_time %> hr</li>
           </ul>
           <% if can? :destroy, recipe %>
-            <%= button_to "Delete", @recipe, method: :delete, class: "btn btn-danger btn-sm" %>
+            <%= button_to "Delete", recipe, method: :delete, class: "btn btn-danger btn-sm" %>
           <% end %>
         </div>
       </div>
     </div>
-    <div class="col-sm-9 p-4">
+    <div class="col-sm-9 p-3">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Description</h5>
           <p class="card-text"><%= recipe.description %></p>
-          <%= link_to "Show recipe", recipe %>
+          <%= link_to "Show  Recipe", recipe %>
         </div>
       </div>
     </div>

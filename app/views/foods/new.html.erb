@@ -9,7 +9,7 @@
           <% if flash[:error] %>
             <div class="alert alert-danger"><%= flash[:error] %></div>
           <% end %>
-          <%= form_with model: newfood, url: foods_path, method: :post, local: true, scope: :food do |f| %>
+          <%= form_with model: new_food, url: foods_path, method: :post, local: true, scope: :food do |f| %>
             <div>
               <div>
                 <%= f.label :name, class: "form-label fw-bold", style: "display: block"  %> <br/>
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="card-footer text-muted text-center">
-      “You do not need a silver fork to eat good food.” ~ By Paul Prudhomme
+      “Food is not rational. Food is culture, habit, craving and identity.” ~ By PJonathan Safran Foer
     </div>
   </div>
 </div>

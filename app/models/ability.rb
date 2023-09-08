@@ -14,6 +14,10 @@ class Ability
       recipe.user == user
     end
 
+    can :update, RecipeFood do |recipe_food|
+      recipe_food.user == user
+    end
+
     can :create, Food
     can :create, Recipe
   end
