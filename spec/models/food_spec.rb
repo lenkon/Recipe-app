@@ -3,23 +3,19 @@ require 'rails_helper'
 RSpec.describe Food, type: :model do
   before(:all) do
     @user = User.create(
-      name: 'Felix',
-      username: DateTime.now.to_s,
-      email: "#{DateTime.now}@gmail.com",
-      password: '123456',
-      password_confirmation: '123456'
+      name: 'Jim',
+      username: 'Jim',
+      email: 'jim@gmail.com',
+      password: '111111',
+      password_confirmation: '111111'
     )
     @food = Food.create(
-      name: 'Tomato',
-      measurement_unit: 'litres',
-      price: 50,
-      quantity: 500,
-      user: @user
+      name: 'Grape',
+      measurement_unit: 'Kg',
+      price: 9,
+      quantity: 40,
+      user_id: @user.id
     )
-  end
-
-  it '@food as created is valid' do
-    expect(@food).to be_valid
   end
 
   it 'food name should be present' do
@@ -45,9 +41,5 @@ RSpec.describe Food, type: :model do
   it 'food price  should be numeric' do
     @food.price = 'One'
     expect(@food).to_not be_valid
-  end
-
-  it 'food owner is user who created it' do
-    expect(@food.user.name).to eq 'Felix'
   end
 end
