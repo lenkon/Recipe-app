@@ -39,3 +39,66 @@
 
   <%= render "devise/shared/links" %>
 </div>
+
+
+<div class="login-page bg-light">
+  <div class="container mt-5 pb-3 pt-6">
+    <div class="card">
+      <div class="card-header text-center">
+        <h3>Create New Account</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="bg-white shadow rounded">
+              <div class="row">
+                <div class="col-md-7 pe-0">
+                  <div class="form-left h-100 py-5 px-5">
+                    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                      <%= render "devise/shared/error_messages", resource: resource %>
+                      <div class="field form-group mb-3">
+                        <%= f.label :name, class: "form-label fw-bold" %><br />
+                        <%= f.text_field :name, class: "form-control", autofocus: true, autocomplete: "name" %>
+                      </div>
+                      <div class="field form-group mb-4">
+                        <%= f.label :username, class: "form-label fw-bold" %><br />
+                        <%= f.text_field :username, class: "form-control", autofocus: true, autocomplete: "username" %>
+                      </div>
+                      <div class="field form-group mb-3">
+                        <%= f.label :email, class: "form-label fw-bold" %><br />
+                        <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email" %>
+                      </div>
+                      <div class="field form-group mb-3">
+                        <%= f.label :password, class: "form-label fw-bold" %>
+                        <% if @minimum_password_length %>
+                          <em>(<%= @minimum_password_length %> characters minimum)</em>
+                        <% end %><br />
+                        <%= f.password_field :password, class: "form-control", autocomplete: "new-password" %>
+                      </div>
+                      <div class="field form-group mb-3">
+                        <%= f.label :password_confirmation, class: "form-label fw-bold" %><br />
+                        <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password" %>
+                      </div>
+                      <div class="actions mb-4">
+                        <%= f.submit "Sign Up", class: "btn btn-primary", data: { turbo: false } %>
+                      </div>
+                    <% end %>
+                    Already have an account? <%= render "devise/shared/links" %>
+                  </div>
+                </div>
+                <div class="col-md-5 ps-0 d-none d-md-block">
+                  <div class="form-right h-100 text-white text-center">
+                    <%= image_tag("header-bg.jpg",class: "img", alt: "Login image")%>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-muted text-center">
+        “Food is not rational. Food is culture, habit, craving and identity.” ~ By PJonathan Safran Foer
+      </div>
+    </div>
+  </div>
+</div>
