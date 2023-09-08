@@ -2,7 +2,7 @@
 <%= render 'description', recipe: @recipe %>
 
 <% if can? :update, @recipe %>
-  <%= render "add_modal", recipe: @recipe, recipe_foods_path: recipe_foods_path %>
+  <%= render "add_modal", recipe: @recipe %>
 <% end %>
 
 <%= render "add_food", recipe: @recipe %>

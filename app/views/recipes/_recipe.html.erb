@@ -6,7 +6,7 @@
           <h5 class="card-text"><%= recipe.name %></h5>
           <ul class="list-group list-group-flush">
             <li class="list-group-item text-success px-0"><strong>Preparation time:</strong> <%= recipe.preparation_time %>mins</li>
-            <li class="list-group-item text-success px-0"><strong>Cooking time:</strong> <%= recipe.cooking_time %> hr</li>
+            <li class="list-group-item text-success px-0"><strong>Cooking time:</strong> <%= recipe.cooking_time %> mins</li>
           </ul>
           <% if can? :destroy, recipe %>
             <%= button_to "Delete", @recipe, method: :delete, class: "btn btn-danger btn-sm" %>

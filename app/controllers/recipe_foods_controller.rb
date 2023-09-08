@@ -18,12 +18,11 @@ class RecipeFoodsController < ApplicationController
 
   def show; end
 
-
   def create
     @recipe_foods = RecipeFood.where('food_id = :x and recipe_id = :y',
-                                       x: recipe_foods_params[:food_id], y: recipe_foods_params[:recipe_id])
+                                     x: recipe_foods_params[:food_id], y: recipe_foods_params[:recipe_id])
 
-    if @recipe_foods.size.zero?
+    if @recipe_foods.empty?
       @recipe_foods = RecipeFood.new(recipe_foods_params)
     else
       @recipe_foods.update(recipe_foods_params)
