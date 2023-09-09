@@ -56,8 +56,17 @@ class RecipeFoodsController < ApplicationController
   end
 
   def destroy
-    RecipeFood.destroy(params[:id])
-    redirect_to recipe_path(recipes_foods_params[:recipe_id])
+    unless @recipe_food.recipe.user == current_user
+      flash[:alert] = 'You cannot remove the ingredient that belongs to other Users.'
+      return redirect_to recipe_path(@recipe)
+    end
+
+    if @recipe_food.destroy
+      flash[:notice] = 'Ingredient was successfully removed.'
+    elsif @recipe_food.errors.any?
+      flash[:alert] = @recipe_food.errors.full_messages.first
+    end
+    redirect_to recipe_path(@recipe)
   end
 
   def recipes_foods_params

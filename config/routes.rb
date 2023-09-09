@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
-  # get 'landing_page/index'
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
   root "landing_page#index"
   
   get 'recipes/public_recipes'
   resources :recipes do
     resources :recipe_foods
+    member do
+      get 'general_shopping_list', to: 'recipe_foods#index', as: 'general_shopping_list'
+    end
   end
-  resources :foods
-  # resources :recipe_foods
+  resources :foods  
 end
