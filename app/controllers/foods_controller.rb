@@ -15,8 +15,10 @@ class FoodsController < ApplicationController
     respond_to do |format|
       format.html do
         if @food.save
+          flash[:notice] = 'Food created successfully!'
           redirect_to foods_path
         else
+          flash[:alert] = @food.errors.full_messages.first
           new_food = Food.new
           render :new, locals: { new_food: }
         end
@@ -25,8 +27,15 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    Food.destroy(params[:id])
-    redirect_to foods_path
+    @food = Food.find(params[:id])
+
+    if @food.destroy
+      flash[:notice] = 'Food deleted successfully!'
+      redirect_to foods_path
+    else
+      flash.now[:alert] = @food.errors.full_messages.first if @food.errors.any?
+      render :index, status: 400
+    end
   end
 
   private
